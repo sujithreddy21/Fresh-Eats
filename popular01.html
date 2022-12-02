@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+</head>
+<body>
+
+    <script>
+      
+// document.body.style.backgroundColor="black";
+// document.body.style.textDecorationColor="white";
+        async function loadPage(){
+            let request = new Request("indexp.json")
+            let response = await fetch(request)
+
+            let json_obj = await response.json()
+
+            load(json_obj)
+           // load2(json_obj)
+        }
+        function load(json_obj){
+
+         let divh=document.createElement("div");
+         divh.style.width="220px";
+         divh.style.height="80px";
+        //  divh.style.padding="40px 0px 40px 0px";
+         divh.style.backgroundColor="orange";
+         divh.style.marginLeft="600px";
+         divh.style.justifyContent = "center";
+         divh.style.alignContent="center";
+         divh.style.border ="2px solid black";
+         document.body.append(divh);
+
+         let headingc=document.createElement("h1");
+         headingc.textContent="Our Categories";
+         divh.append(headingc);
+
+//main categories div
+
+         let divc=document.createElement("div");
+         divc.style.width="100%";
+         divc.style.height="450px";
+         divc.style.display="flex";
+         divc.style.padding="40px 0px 40px 0px";
+         document.body.append(divc);
+  
+//fruits and vegetables
+
+            let divc1=document.createElement("div");
+            divc1.style.height="600px";
+            divc1.style.width="500px";
+            divc1.style.textAlign="center";
+            // divc1.style.backgroundColor="pink";
+            divc.append(divc1);
+
+            let imgfndv=document.createElement("img");
+            imgfndv.src=json_obj.imgfndv;
+            imgfndv.style.height="400px";
+            imgfndv.style.width="400px";
+            imgfndv.style.boxShadow="20px 20px red";
+            divc1.append(imgfndv);
+
+            let text1=document.createElement("h2");
+            text1.textContent=json_obj.text1;
+            divc1.append(text1);
+
+            // let textf1=document.createElement("h4");
+            // textf1.textContent="Baby Corn";
+            // divc1.append(textf1);
+
+//meat
+
+            let divc2=document.createElement("div");
+            divc2.style.width="500px";
+            divc2.style.height="600px";
+            // divc2.style.backgroundColor="red";
+            divc2.style.textAlign="center";
+            // divc2.style.padding="0px 50px 0px 50px"
+            divc.append(divc2);
+ 
+
+            let imgmeat=document.createElement("img");
+            imgmeat.src=json_obj.imgmeat;
+            imgmeat.style.height="400px";
+            imgmeat.style.width="400px";
+            imgmeat.style.boxShadow="20px 20px yellow";
+            divc2.append(imgmeat);
+
+            let text2=document.createElement("h2");
+            text2.textContent=json_obj.text2;
+            divc2.append(text2);
+
+//Dairy
+
+            let divc3=document.createElement("div");
+            divc3.style.width="500px";
+            divc3.style.height="600px";
+            // divc2.style.backgroundColor="red";
+            divc3.style.textAlign="center";
+            // divc3.style.padding="0px 50px 0px 50px"
+            divc.append(divc3);
+
+            let imgdairy=document.createElement("img");
+            imgdairy.src=json_obj.imgdairy;
+            imgdairy.style.height="400px";
+            imgdairy.style.width="400px";
+            imgdairy.style.boxShadow="20px 20px orange";
+            divc3.append(imgdairy);
+
+           let text3=document.createElement("h2");
+           text3.textContent=json_obj.text3;
+           divc3.append(text3);
+
+//div categories row 2.
+
+           let divcr2=document.createElement("div");
+           divcr2.style.height="450px";
+           divcr2.style.width="100%";
+        //    divcr2.style.alignContent="center";
+        //    divcr2.style.alignItems="center";
+           divcr2.style.display="flex";
+         divcr2.style.padding="40px 0px 40px 0px";
+         document.body.append(divcr2);
+
+ //div  4  spices
+
+         let divc4=document.createElement("div");
+         divc4.style.width="500px";
+            divc4.style.height="600px";
+            divc4.style.textAlign="center";
+            // divc4.style.padding="0px 50px 0px 50px";
+            divcr2.append(divc4);
+
+            let imgspices=document.createElement("img");
+            imgspices.src=json_obj.imgspices;
+            imgspices.style.width="400px";
+            imgspices.style.height="400px";
+            // imgspices.style.boxshadow="20px 20px orange";
+            imgspices.style.boxShadow="20px 20px slateblue";
+             divc4.append(imgspices); 
+             
+             let text4=document.createElement("h2");
+            //  text4.textContent="Indian Spices";
+            //  text4.src=json_obj.text4;
+            //  divc4.append(text4);
+            // let text4=document.createElement("h2");
+            text4.innerHTML=json_obj.text4;
+            divc4.append(text4);
+
+//divc 5 pastries
+
+            let divc5=document.createElement("div");
+            divc5.style.height="600px";
+            divc5.style.width="500px";
+            // divc5.style.alignContent="center";
+            divc5.style.textAlign="center";
+            // divc5.style.padding="0px 50px 0px 50px";
+            divcr2.append(divc5);
+
+            let imagepastries=document.createElement("img");
+            imagepastries.src=json_obj.imagepastries;
+            imagepastries.style.width="400px",
+            imagepastries.style.height="400px";
+            imagepastries.style.boxShadow="20px 20px green";
+            divc5.append(imagepastries);
+//#FF5733
+            let text5=document.createElement("h2");
+            text5.innerHTML=json_obj.text5;
+            divc5.append(text5);
+
+//gift
+
+            let divc6=document.createElement("div");
+            divc6.style.height="600px";
+            divc6.style.width="500px";
+            // divc6.style.alignContent="center";
+            divc6.style.textAlign="center";
+            divcr2.append(divc6);
+
+            let imagegift=document.createElement("img");
+            imagegift.src=json_obj.imagegift;
+            imagegift.style.height="400px";
+            imagegift.style.width="400px";
+            imagegift.style.boxShadow="20px 20px blue";
+            divc6.append(imagegift);
+
+            let text6=document.createElement("h2");
+            text6.innerHTML=json_obj.text6;
+            divc6.append(text6);
+//Top products
+
+            let divbox=document.createElement("div");
+            divbox.style.width="200px";
+            divbox.style.height="80px";
+            divbox.style.backgroundColor="orange";
+            divbox.style.marginLeft="600px";
+            divbox.style.border ="2px solid black";
+            document.body.append(divbox);
+
+           let heading=document.createElement("h1");
+           heading.textContent="Top Products";
+           heading.style.textAlign="center";
+          // div.style.alignItems = "center";
+          heading.style.justifyContent = "center";
+          divbox.append(heading);
+
+         //main div//
+
+            let div =document.createElement("div");
+            div.style.width="100%";
+            div.style.height="500px";
+            div.style.display="flex";
+            div.style.paddingTop="70px";
+            div.style.paddingLeft="-30px";
+            div.style.alignItems = "center";
+            div.style.justifyContent = "center";
+            // div.style.border="2px solid black"
+            div.style.marginLeft="-70px";
+            document.body.append(div);
+
+//div1 product 1
+
+            let div1=document.createElement("div");
+            div1.style.height="500px";
+            div1.style.width="250px";
+             div1.style.padding="100px";
+            div1.style.alignItems = "center";
+            div1.style.justifyContent = "center";
+            div1.style.flexDirection = "column";
+            // div1.style.border="2px solid black";
+            
+
+            div.append(div1);
+
+            let image=document.createElement("img");
+            image.src=json_obj.image;
+            image.style.height="250px";
+            image.style.width="250px";
+            div1.append(image);
+
+            let p1=document.createElement("p");
+            p1.textContent=json_obj.delivery1;
+            p1.style.alignItems="center";
+            div1.append(p1);
+
+            let pname1=document.createElement("h2");
+            pname1.textContent=json_obj.pname1;
+            div1.append(pname1);
+
+            let price1=document.createElement("h3");
+            price1.textContent=json_obj.price1;
+            div1.append(price1);
+
+            let mrp1=document.createElement("h3");
+            mrp1.textContent=json_obj.mrp1;
+            mrp1.style.textDecoration="line-through";
+            div1.append(mrp1);
+
+            let buy1=document.createElement("div");
+            buy1.style.height="30px";
+            buy1.style.width="div1";
+            buy1.style.textAlign="center";
+            buy1.style.alignContent="center";
+            buy1.style.justifyContent="center";
+            buy1.style.backgroundColor="orange";
+            div1.append(buy1);
+
+            let buytext=document.createElement("h3");
+            buytext.textContent="ADD TO CART";
+            buytext.style.textAlign="center";
+            buy1.append(buytext);
+
+
+
+//div2
+
+            let divs2=document.createElement("div");
+            // let divs2 =document.createElement("div");
+            divs2.style.width="250px";
+            divs2.style.height="500px";
+            divs2.style.alignItems = "center";
+            
+            // divs2.style.flexDirection = "column";
+            div.append(divs2);
+            
+            // document.body.append(divs2);
+
+            let imagemaggi=document.createElement("img");
+            imagemaggi.src=json_obj.imagemaggie; 
+            imagemaggi.style.width="250px";
+            imagemaggi.style.bordercolor="orange";
+            imagemaggi.style.height="250px";
+            divs2.append(imagemaggi);
+
+            let delivery2=document.createElement("p");
+            delivery2.textContent=json_obj.delivery2;
+            divs2.append(delivery2);
+
+            let pname2=document.createElement("h2");
+            pname2.textContent=json_obj.pname2;
+            divs2.append(pname2);
+
+            let price2=document.createElement("h3");
+            price2.textContent=json_obj.price2;
+            divs2.append(price2);
+
+            let mrp2=document.createElement("h3");
+            mrp2.textContent=json_obj.mrp2;
+            mrp2.style.textDecoration="line-through";
+            divs2.append(mrp2);
+
+            let buy2=document.createElement("div");
+            buy2.style.height="30px";
+            buy2.style.width="divs2";
+            buy2.style.textAlign="center";
+            buy2.style.alignContent="center";
+            buy2.style.justifyContent="center";
+            buy2.style.backgroundColor="orange";
+            divs2.append(buy2);
+
+            let buytext2=document.createElement("h3");
+            buytext2.textContent="ADD TO CART";
+            buy2.append(buytext2);
+
+//div3
+
+            let divs3=document.createElement("div");
+            divs3.style.width="250px";
+            divs3.style.height="500px";
+            divs3.style.alignItems = "center";
+            divs3.style.padding = "100px";
+            // divs3.style.flexDirection = "column";
+            div.append(divs3);
+
+            let imgsauce=document.createElement("img");
+            imgsauce.src=json_obj.imgsauce;
+            imgsauce.style.width="250px";
+            imgsauce.style.height="250px";
+            divs3.append(imgsauce);
+
+            let delivery3=document.createElement("p");
+            delivery3.textContent=json_obj.delivery3;
+            divs3.append(delivery3);
+
+            let pname3=document.createElement("h2");
+            pname3.textContent=json_obj.pname3;
+            divs3.append(pname3);
+
+            // let price3=document.createElement("h3");
+            // price3.textcontent=json_obj.price3;
+            // divs3.append(price3);
+
+            let price3=document.createElement("h3");
+            price3.textContent=json_obj.price3;
+            divs3.append(price3);
+
+            let mrp3=document.createElement("h3");
+            mrp3.textContent=json_obj.mrp3;
+            mrp3.style.textDecoration="line-through";
+            divs3.append(mrp3);
+
+            let buy3=document.createElement("div");
+            buy3.style.height="30px";
+            buy3.style.width="divs3";
+            buy3.style.textAlign="center";
+            buy3.style.alignContent="center";
+            buy3.style.justifyContent="center";
+            buy3.style.backgroundColor="orange";
+            divs3.append(buy3);
+
+            let buytext3=document.createElement("h3");
+            buytext3.textContent="ADD TO CART";
+            buy3.append(buytext3);
+
+//div4
+
+            let divs4=document.createElement("div");
+            divs4.style.width="250px";
+            divs4.style.height="500px";
+            divs4.style.alignItems = "center";
+            // divs4.style.padding = "100px";
+            div.append(divs4);
+
+            let imagesalt=document.createElement("img");
+            imagesalt.src=json_obj.imagesalt;
+            imagesalt.style.height="250px";
+            imagesalt.style.width="250px";
+            divs4.append(imagesalt);
+
+           let delivery4=document.createElement("p");
+           delivery4.textContent=json_obj.delivery4;
+           divs4.append(delivery4);
+
+           let pname4=document.createElement("h2");
+           pname4.textContent=json_obj.pname4;
+           divs4.append(pname4);
+
+           let price4=document.createElement("h3");
+           price4.textContent=json_obj.price4;
+           divs4.append(price4);
+
+           let mrp4=document.createElement("h3");
+           mrp4.textContent=json_obj.mrp4;
+        //    mrp4.style="linethrough";
+        mrp4.style.textDecoration="line-through";
+           divs4.append(mrp4);
+
+           let buy4=document.createElement("div");
+            buy4.style.height="30px";
+            buy4.style.width="divs4";
+            buy4.style.textAlign="center";
+            buy4.style.alignContent="center";
+            buy4.style.justifyContent="center";
+            buy4.style.backgroundColor="orange";
+            divs4.append(buy4);
+
+            let buytext4=document.createElement("h3");
+            buytext4.textContent="ADD TO CART";
+            buy4.append(buytext4);
+
+//2nd row//
+
+           let divr2=document.createElement("div");
+           divr2.style.width="100%";
+           divr2.style.height="450px";
+           divr2.style.justifyContent="center";
+           divr2.style.display="flex";
+           div.style.alignItems = "center";
+           divr2.style.paddingLeft="-30px";
+           divr2.style.marginTop="100px";
+           divr2.style.marginLeft="-70px";
+        //    divr2.style.border="2px solid black"
+           document.body.append(divr2);
+
+//div5
+
+           let divs5=document.createElement("div");
+            divs5.style.width="250px";
+            divs5.style.height="500px";
+            divs5.style.padding = "0px 100px 0px 100px";
+            divs5.style.marginTop="25px";
+            divr2.append(divs5);
+
+            let imagesugar=document.createElement("img");
+            imagesugar.src=json_obj.imagesugar;
+            imagesugar.style.height="230px";
+            imagesugar.style.width="250px";
+            divs5.append(imagesugar);
+
+           let delivery5=document.createElement("p");
+           delivery5.textContent=json_obj.delivery5;
+           divs5.append(delivery5);
+
+           let pname5=document.createElement("h2");
+           pname5.textContent=json_obj.pname5;
+           divs5.append(pname5);
+
+           let price5=document.createElement("h3");
+           price5.textContent=json_obj.price5;
+           divs5.append(price5);
+
+           let mrp5=document.createElement("h3");
+           mrp5.textContent=json_obj.mrp5;
+           mrp5.style.textDecoration="line-through";
+           divs5.append(mrp5);
+
+           let buy5=document.createElement("div");
+            buy5.style.height="30px";
+            buy5.style.width="divs5";
+            buy5.style.textAlign="center";
+            buy5.style.alignContent="center";
+            buy5.style.justifyContent="center";
+            buy5.style.backgroundColor="orange";
+            // buy5.style.border="2px solid black";
+            divs5.append(buy5);
+
+            let buytext5=document.createElement("h3");
+            buytext5.textContent="ADD TO CART";
+            buy5.append(buytext5);
+
+//div6
+
+           let divs6=document.createElement("div");
+            divs6.style.width="250px";
+            divs6.style.height="500px";
+            divs6.style.alignItems = "center";
+            // divs5.style.paddingTop= "100px";
+            divr2.append(divs6);
+
+            let imagecookies=document.createElement("img");
+            imagecookies.src=json_obj.imagecookies;
+            imagecookies.style.height="250px";
+            imagecookies.style.width="250px";
+            divs6.append(imagecookies);
+
+           let delivery6=document.createElement("p");
+           delivery6.textContent=json_obj.delivery6;
+           divs6.append(delivery6);
+
+           let pname6=document.createElement("h2");
+           pname6.textContent=json_obj.pname6;
+           divs6.append(pname6);
+
+           let price6=document.createElement("h3");
+           price6.textContent=json_obj.price6;
+           divs6.append(price6);
+
+           let mrp6=document.createElement("h3");
+           mrp6.textContent=json_obj.mrp6;
+           mrp6.style.textDecoration="line-through";
+           divs6.append(mrp6);
+
+           let buy6=document.createElement("div");
+            buy6.style.height="30px";
+            buy6.style.width="divs6";
+            buy6.style.textAlign="center";
+            buy6.style.alignContent="center";
+            buy6.style.justifyContent="center";
+            buy6.style.backgroundColor="orange";
+            divs6.append(buy6);
+
+            let buytext6=document.createElement("h3");
+            buytext6.textContent="ADD TO CART";
+            buy6.append(buytext6);
+
+           //div7
+
+           let divs7=document.createElement("div");
+           divs7.style.height="500px",
+           divs7.style.width="250px";
+           divs7.style.padding="0px 100px 0px 100px";
+           divr2.append(divs7);
+
+           let imageshampoo=document.createElement("img");
+           imageshampoo.src=json_obj.imageshampoo;
+           imageshampoo.style.height="250px";
+            imageshampoo.style.width="250px";
+            divs7.append(imageshampoo);   
+
+            let delivery7=document.createElement("p");
+            delivery7.textContent=json_obj.delivery7;
+            divs7.append(delivery7);
+
+            let pname7=document.createElement("h2");
+            pname7.textContent=json_obj.pname7;
+            divs7.append(pname7);
+
+            let price7=document.createElement("h3");
+            price7.textContent=json_obj.price7;
+            divs7.append(price7);
+
+            let mrp7=document.createElement("h3");
+            mrp7.textContent=json_obj.mrp7;
+            mrp7.style.textDecoration="line-through";
+            divs7.append(mrp7);
+
+            let buy7=document.createElement("div");
+            buy7.style.height="30px";
+            buy7.style.width="divs7";
+            buy7.style.textAlign="center";
+            buy7.style.alignContent="center";
+            buy7.style.justifyContent="center";
+            buy7.style.backgroundColor="orange";
+            divs7.append(buy7);
+
+            let buytext7=document.createElement("h3");
+            buytext7.textContent="ADD TO CART";
+            buy7.append(buytext7);
+
+//Div 8 product 8
+
+            let divs8=document.createElement("div");
+           divs8.style.height="700px",
+           divs8.style.width="250px";
+           divr2.append(divs8);
+
+           let imagesoap=document.createElement("img");
+           imagesoap.src=json_obj.imagesoap;
+           imagesoap.style.height="250px";
+            imagesoap.style.width="250px";
+            divs8.append(imagesoap);   
+
+            let delivery8=document.createElement("p");
+            delivery8.textContent=json_obj.delivery8;
+            divs8.append(delivery8);
+
+            let pname8=document.createElement("h2");
+            pname8.textContent=json_obj.pname8;
+            divs8.append(pname8);
+
+            let price8=document.createElement("h3");
+            price8.textContent=json_obj.price8;
+            divs8.append(price8);
+
+            let mrp8=document.createElement("h3");
+            mrp8.textContent=json_obj.mrp8;
+            mrp8.style.textDecoration="line-through";
+            divs8.append(mrp8);
+
+            let pdiv=document.createElement("div");
+            pdiv.style.width="divs8";
+            pdiv.style.height="50px";
+            pdiv.style.display="flex";
+            pdiv.style.justifyContent="center";
+            pdiv.style.alignContent="center";
+            // pdiv.style.border=""
+            divs8.append(pdiv);
+
+            let textf=document.createElement("p");
+            textf.textContent="xyz";
+            textf.style.padding="0px 20px 0px 20px";
+            pdiv.append(textf);
+
+            let textf2=document.createElement("p");
+            textf2.textContent="xyz";
+            textf2.style.padding="0px 20px 0px 0px";
+            pdiv.append(textf2); 
+
+           let textf3=document.createElement("p");
+           textf3.textContent="xyz";
+            textf3.style.padding="0px 20px 0px 20px";
+            pdiv.append(textf3); 
+
+            let buy8=document.createElement("div");
+            buy8.style.height="30px";
+            buy8.style.width="divs8";
+            buy8.style.alignContent="center";
+            buy8.style.textAlign="center";
+            buy8.style.justifyContent="30px";
+            buy8.style.backgroundColor="orange";
+            
+            divs8.append(buy8);
+
+            let buytext8=document.createElement("h3");
+            buytext8.textContent="ADD TO CART";
+            buy8.append(buytext8);
+        }
+      //   let divs9=document.createElement("div");
+      //   divs9.style.width="100%";
+      //   divs9.style.height="500px";
+      //   document.body.append(divs9);
+
+      //   let imagebat=document.createElement("img");
+      //   imagebat.src=json_obj.imagebat;
+      //   imagebat.style.height="500px";
+      //   imagebat.style.width="100%";
+      //   divs9.append(imagebat);
+
+loadPage()
+
+  
+    </script>
+</body>
+</html>

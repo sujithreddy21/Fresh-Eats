@@ -1,0 +1,70 @@
+{
+
+     "image":"roasted.jpg",
+     "delivery1":"Delivery in 90 minutes",
+     "pname1":"Roasted Garlic Dip",
+     "price1":"1PC Buy @ Rs.79.00/-",
+     "mrp1":"MRP Rs 90.00/-",
+    
+     "imagemaggie":"maggie.jpg",
+     "delivery2":"Delivery in 90 minutes",
+     "pname2":"Maggi 2-Min Noodles",
+     "price2":"1PC Buy @ Rs.30.00/-",
+     "mrp2":"MRP Rs 40.00/-",
+     
+     "imgsauce":"sauce.jpg",
+     "delivery3":"Delivery in 90 minutes",
+     "pname3":"Tomato Ketchup",
+     "price3":"1PC Buy @ Rs.50.00/-",
+     "mrp3":"MRP Rs 65.00/-", 
+      
+     "imagesalt":"imagsalt.jpg",
+     "delivery4":"Delivery in 90 minutes",
+     "pname4":"Tata Salt",
+     "price4":"1PC Buy @ Rs.40.00/-",
+     "mrp4":"MRP Rs 65.00/-" ,
+
+     "imagesugar":"sugar.jpg",
+     "delivery5":"Delivery in 90 minutes",
+     "pname5":"Sugar",
+     "price5":"1PC Buy @ Rs.50.00/-",
+     "mrp5":"MRP Rs 75.00/-", 
+
+     "imagecookies":"Cookies.jpg",
+     "delivery6":"Delivery in 90 minutes",
+     "pname6":"Britinia Cookies",
+     "price6":"1PC Buy @ Rs.50.00/-",
+     "mrp6":"MRP Rs 75.00/-",
+
+     "imageshampoo":"shampoo.jpg",
+     "delivery7":"Delivery in 90 minutes",
+     "pname7":"Hair Shampoo",
+     "price7":"1PC Buy @ Rs.90.00/-",
+     "mrp7":"MRP Rs 100.00/-",
+
+     "imagesoap":"soap.jpg",
+     "delivery8":"Delivery in 90 minutes",
+     "pname8":"Body Soap",
+     "price8":"1PC Buy @ Rs.90.00/-",
+     "mrp8":"MRP Rs 100.00/-",
+
+     "imgfndv":"fndv.jpg",
+     "text1":"Fruits and Vegetables",
+
+     "imgmeat":"meat.jpg",
+     "text2":"Fresh Cuts",
+
+     "imgdairy":"dairy.jpg",
+     "text3":" Dairy Products",
+
+     "imgspices":"spices.jpg",
+   "text4":"Indian Spices",
+
+   "imagepastries":"pastries.jpg",
+   "text5":"Pastries",
+
+   "imagegift":"gift.jpg",
+   "text6":"Gift Studio",
+
+   "imagebat":"meat.jpg"
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    async function popularPage(){
+            let request = new Request("popular.json")
+            let response = await fetch(request)
+            let json_obj = await response.json()
+            popular(json_obj)
+           
+        }
+        function popular(json_obj){
+           let divmp=document.createElement("div");
+           divmp.style.height="80px";
+           divmp.style.width="auto";
+           divmp.style.paddingLeft="40%";
+           divmp.style.paddingTop="20px";
+         //   divmp.style.marginLeft="200px";
+           divmp.style.fontFamily="Comic Sans MS";
+           divmp.style.backgroundColor="orange";
+           document.body.append(divmp);
+           
+           let text01=document.createElement("h1");
+           text01.innerHTML=json_obj.text01;
+           divmp.append(text01);
+
+           let divmp1=document.createElement("div");
+          divmp1.style.width="100%";
+          divmp1.style.height="450px";
+          divmp1.style.display="flex";
+          divmp1.style.display="flex";
+          document.body.append(divmp1);
+
+//image 1 small div
+          let divmp2=document.createElement("div");
+           divmp2.style.height="450px";
+           divmp2.style.width="450px";        
+           divmp1.append(divmp2);
+
+
+          let image1=document.createElement("img");
+          image1.src=json_obj.image1;
+          image1.style.height="450px";
+          image1.style.width="450px";
+          divmp2.append(image1);
+//middle texts
+          let divmp3=document.createElement("div");
+           divmp3.style.height="500px";
+           divmp3.style.width="600px"; 
+        //    divmp3.style.marginLeft="200px";
+        //    divmp3.style.marginBottom="1000px";
+           divmp3.style.fontSize="20px";      
+           divmp3.style.fontFamily="Inter";
+           divmp3.style.fontStyle="italic";
+           divmp3.style.fontWeight="800";
+
+           divmp1.append(divmp3);
+        
+           let text2=document.createElement("h2");
+           text2.innerHTML=json_obj.text2;
+           divmp3.append(text2); 
+           
+           let divmp4=document.createElement("div");
+        //    divmp4.style.height="290px";
+        //    divmp4.style.width="200px";        
+           divmp1.append(divmp4);
+
+           let text3=document.createElement("h2");
+           text3.innerHTML=json_obj.text3;
+           divmp4.append(text3); 
+
+           let divmp5=document.createElement("div");
+        //    divmp5.style.height="100px";
+        //    divmp5.style.width="200px";        
+           divmp1.append(divmp5);
+
+           let text4=document.createElement("h2");
+           text4.innerHTML=json_obj.text4;
+           divmp3.append(text3); 
+           divmp3.append(text4);
+// last image
+           let divmp6=document.createElement("div");
+           divmp6.style.height="450px";
+           divmp6.style.width="300px"; 
+
+           divmp1.append(divmp6);
+
+           let image2=document.createElement("img");
+          image2.src=json_obj.image2;
+          image2.style.height="450px";
+          image2.style.width="300px";
+          image2.style.marginRight="100px";
+          divmp6.append(image2);
+ //BOTTOM ROW
+
+          let divd=document.createElement("div");
+          divd.style.width="100%";
+          divd.style.height="400px";
+          divd.style.display="flex";
+          document.body.append(divd);
+//LINEIMAGES
+
+          let divd1=document.createElement("div");
+           divd1.style.height="300px";
+           divd1.style.width="350px";        
+           divd.append(divd1);
+
+           let image3=document.createElement("img");
+          image3.src=json_obj.image3;
+          image3.style.height="300px";
+          image3.style.width="300px";
+          divd1.append(image3);
+
+          let text5=document.createElement("h2");
+           text5.innerHTML=json_obj.text5;
+           text5.style.fontFamily="Inter";
+           text5.style.fontStyle="italic";
+           divd1.append(text5);
+
+           let text6=document.createElement("h2");
+           text6.innerHTML=json_obj.text6;
+           text6.style.fontFamily="Inter";
+           text6.style.fontStyle="italic";
+           divd1.append(text6);
+
+           let divd2=document.createElement("div");
+           divd2.style.height="300px";
+           divd2.style.width="350px";        
+           divd.append(divd2);
+
+           let image4=document.createElement("img");
+          image4.src=json_obj.image4;
+          image4.style.height="300px";
+          image4.style.width="300px";
+          divd2.append(image4);
+
+          let text7=document.createElement("h2");
+           text7.innerHTML=json_obj.text7;
+           text7.style.fontFamily="Inter";
+           text7.style.fontStyle="italic";
+           divd2.append(text7);
+
+           let text8=document.createElement("h2");
+           text8.innerHTML=json_obj.text8;
+           text8.style.fontFamily="Inter";
+           text8.style.fontStyle="italic";
+           divd2.append(text8);
+
+           let divd3=document.createElement("div");
+           divd3.style.height="300px";
+           divd3.style.width="350px";        
+           divd.append(divd3);
+
+           let image5=document.createElement("img");
+          image5.src=json_obj.image5;
+          image5.style.height="300px";
+          image5.style.width="300px";
+          divd3.append(image5);
+
+          let text9=document.createElement("h2");
+           text9.innerHTML=json_obj.text9;
+           text9.style.fontFamily="Inter";
+           text9.style.fontStyle="italic";
+           divd3.append(text9);
+
+           let text10=document.createElement("h2");
+           text10.innerHTML=json_obj.text10;
+           text10.style.fontFamily="Inter";
+           text10.style.fontStyle="italic";
+           divd3.append(text10);
+         
+           let divd4=document.createElement("div");
+           divd4.style.height="300px";
+           divd4.style.width="350px";        
+           divd.append(divd4);
+
+           let image6=document.createElement("img");
+          image6.src=json_obj.image6;
+          image6.style.height="300px";
+          image6.style.width="300px";
+          divd4.append(image6);
+
+          let text11=document.createElement("h2");
+           text11.innerHTML=json_obj.text11;
+           text11.style.fontFamily="Inter";
+           text11.style.fontStyle="italic";
+           divd4.append(text11);
+
+           let text12=document.createElement("h2");
+           text12.innerHTML=json_obj.text12;
+           text12.style.fontFamily="Inter";
+           text12.style.fontStyle="italic";
+           divd4.append(text12);
+//*****************************************************************************************************//
+//our brands
+         
+           let divde=document.createElement("div");
+           divde.style.height="80px";
+           divde.style.width="auto";
+           divde.style.paddingLeft="40%";
+           divde.style.paddingTop="15px";
+           divde.style.fontFamily="Comic Sans MS";
+           divde.style.backgroundColor="orange";
+           document.body.append(divde);
+           
+           let text13=document.createElement("h1");
+           text13.innerHTML=json_obj.text13;
+           divde.append(text13); 
+
+           let divde1=document.createElement("div");
+          divde1.style.width="100%";
+          divde1.style.height="250px";
+          divde1.style.display="flex";
+          document.body.append(divde1);
+
+          let divde2=document.createElement("div");
+           divde2.style.height="250px";
+           divde2.style.width="250px";   
+           divde2.style.display="flex";
+           divde1.append(divde2);
+
+           let image7=document.createElement("img");
+          image7.src=json_obj.image7;
+          image7.style.height="250px";
+          image7.style.width="250px";
+          divde2.append(image7);
+           
+          let divde3=document.createElement("div");
+           divde3.style.height="250px";
+           divde3.style.width="250px";        
+           divde1.append(divde3);
+
+           let image8=document.createElement("img");
+          image8.src=json_obj.image8;
+          image8.style.height="250px";
+          image8.style.width="250px";
+          divde2.append(image8);
+
+          let divde4=document.createElement("div");
+           divde4.style.height="250px";
+           divde4.style.width="250px";        
+           divde2.append(divde4);
+
+           let image9=document.createElement("img");
+          image9.src=json_obj.image9;
+          image9.style.height="250px";
+          image9.style.width="250px";
+          divde2.append(image9);
+
+          let divde5=document.createElement("div");
+           divde5.style.height="250px";
+           divde5.style.width="250px";       
+           divde2.append(divde5);
+
+           let image10=document.createElement("img");
+          image10.src=json_obj.image10;
+          image10.style.height="250px";
+          image10.style.width="250px";
+          divde2.append(image10);
+
+          let divde6=document.createElement("div");
+           divde6.style.height="250px";
+           divde6.style.width="250px";        
+           divde2.append(divde6);
+
+           let image11=document.createElement("img");
+          image11.src=json_obj.image11;
+          image11.style.height="250px";
+          image11.style.width="250px";
+          divde2.append(image11);
+
+
+
+           
+           
+
+
+         
+
+
+        }
+        
+
+
+
+        popularPage()
+  </script>
+
+</body>
+</html>
